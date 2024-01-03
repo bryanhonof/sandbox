@@ -1,0 +1,13 @@
+name: "CI"
+
+on:
+  push:
+
+jobs:
+  bla:
+    runs-on: "macos-latest"
+    steps:
+      - name: "Install flox"
+        uses: "flox/install-flox-action@bryanhonof.test-new-launch-subcommands"
+      - name: "Build something"
+        run: "flox nix run nixpkgs#hello"
